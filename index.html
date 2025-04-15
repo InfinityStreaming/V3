@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity Streaming</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      color: white;
+    }
+    header, footer {
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 20px;
+    }
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+      color: #00bfff;
+    }
+    .main-section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .cta-button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      background-color: #00bfff;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background-color: #007acc;
+    }
+    .plans, .benefits, .testimonials, .faq {
+      margin-top: 30px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .benefits div, .faq div {
+      margin-bottom: 15px;
+    }
+    .countdown {
+      font-size: 1.5em;
+      margin: 20px 0;
+      text-align: center;
+      color: #ffd700;
+    }
+    .mascot {
+      margin: 30px auto;
+      text-align: center;
+    }
+    .mascot img {
+      width: 150px;
+    }
+  </style>
+  <script>
+    function startCountdown() {
+      const offerEnd = new Date();
+      offerEnd.setDate(offerEnd.getDate() + 2);
+      setInterval(() => {
+        const now = new Date().getTime();
+        const distance = offerEnd - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerText = 
+          `${days}d ${hours}h ${minutes}m ${seconds}s restantes!`;
+      }, 1000);
+    }
+    window.onload = startCountdown;
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">Infinity Streaming &#8734;</div>
+  </header>
+
+  <section class="main-section">
+    <h2>Sua TV online sem limites!</h2>
+    <p>Acesse filmes, séries, esportes e muito mais com estabilidade e qualidade.</p>
+
+    <div class="plans">
+      <p><strong>Plano Mensal:</strong> R$ 25,00</p>
+      <p><strong>Plano Anual (Promoção):</strong> R$ 199,90</p>
+    </div>
+
+    <div class="countdown" id="countdown"></div>
+
+    <div class="benefits">
+      <h3>Benefícios:</h3>
+      <div>• +10.000 canais, filmes e séries</div>
+      <div>• Qualidade HD e Full HD</div>
+      <div>• Suporte rápido via WhatsApp</div>
+      <div>• Servidor backup ativo 24h</div>
+    </div>
+
+    <div class="cta">
+      <a class="cta-button" href="https://wa.me/5547988675945?text=Infinity%20" target="_blank">
+        Pedir Teste Grátis pelo WhatsApp
+      </a>
+    </div>
+
+    <div class="testimonials">
+      <h3>Depoimentos de clientes:</h3>
+      <p>“Nunca mais perdi meus jogos favoritos. Perfeito!” — <strong>João M.</strong></p>
+      <p>“Atendimento nota 10 e sem travamentos.” — <strong>Larissa F.</strong></p>
+    </div>
+
+    <div class="faq">
+      <h3>Perguntas Frequentes:</h3>
+      <div><strong>1. Como funciona o teste grátis?</strong><br/> Enviamos acesso por 24h via WhatsApp.</div>
+      <div><strong>2. Quais aparelhos são compatíveis?</strong><br/> TVs, celulares, TV Box e até notebook.</div>
+      <div><strong>3. Tem suporte técnico?</strong><br/> Sim! Atendimento rápido e dedicado via WhatsApp.</div>
+    </div>
+
+    <div class="mascot">
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712032.png" alt="Mascote Infinity Streaming" />
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Infinity Streaming. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
